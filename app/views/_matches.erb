@@ -1,0 +1,8 @@
+<p>You entered <b><%= @word %></b> and its anagrams are:</p>
+<ul>
+  <% @anagrams.each do |word| %>
+    <% unless word.word.downcase == @word.downcase %>
+      <li><%= word.word %></li>
+    <% end %>
+  <% end %>
+</ul>
